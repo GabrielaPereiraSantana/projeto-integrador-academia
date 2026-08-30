@@ -24,6 +24,18 @@ public class MatriculaController {
         return ResponseEntity.status(200).body(resultado);
     };
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Matricula> buscarId(@PathVariable Integer id){
+        String sql = "SELECT * FROM alunos WHERE id = ?";
+        List<Matricula> resultado = jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Matricula.class),id);
+
+        if (resultado.isEmpty()) {
+            return ResponseEntity.status(404).build();
+        }
+
+        return ResponseEntity.status(200).body(resultado.get(0));
+    }
+
     @PostMapping
     public ResponseEntity<Void> cadastrar(@RequestBody Matricula matricula){
 

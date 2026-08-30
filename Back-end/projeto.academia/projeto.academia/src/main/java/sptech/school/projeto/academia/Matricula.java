@@ -1,7 +1,8 @@
 package sptech.school.projeto.academia;
 
-
 public class Matricula {
+
+    private Integer id;
     private String nome;
     private String email;
     private String telefone;
@@ -9,6 +10,8 @@ public class Matricula {
     private Double peso;
     private Double altura;
 
+    public Matricula() {
+    }
 
     public Matricula(String nome, String email, String telefone, String plano_escolhido, Double peso, Double altura) {
         this.nome = nome;
@@ -19,7 +22,12 @@ public class Matricula {
         this.altura = altura;
     }
 
-    public Matricula() {
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -69,9 +77,4 @@ public class Matricula {
     public void setAltura(Double altura) {
         this.altura = altura;
     }
-
-
 }
-
-
-
