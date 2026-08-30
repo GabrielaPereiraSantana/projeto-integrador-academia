@@ -13,7 +13,7 @@ Academia (Fit Power Academia) — tema associado à primeira letra do nome do al
 * Edição de aluno existente — carrega os dados via GET e salva as alterações via PUT.
 * Painel com estatísticas — total de alunos, plano mais popular e peso médio, calculados a partir dos dados reais retornados pela API.
 
-## ▶️ Como executar
+## Como executar
 
 Este projeto integra dois projetos separados: a API (back-end) e esta aplicação front-end. Os dois precisam estar rodando ao mesmo tempo para a aplicação funcionar por completo.
 
